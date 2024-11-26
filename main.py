@@ -1,4 +1,4 @@
-import libevdev, usb.core, usb.util, os
+import libevdev, usb.core, usb.util
 
 dev = usb.core.find(idVendor=0x08f2, idProduct=0x6811)
 
