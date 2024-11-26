@@ -1,4 +1,4 @@
-import libevdev, usb.core, usb.util, time
+import libevdev, usb.core, usb.util, time, os
 
 def handleTablet(dev):
     # Pen communating at 1.12.5
@@ -54,4 +54,7 @@ def main():
         main() # Maybe user disconnet tablet which cause I/O error
 
 if __name__ == "__main__":
+    if os.geteuid() != 0:
+        input("Permission denied! You should run this programm for sudo!\r\nPress Enter to exit")
+        exit("")
     main()
