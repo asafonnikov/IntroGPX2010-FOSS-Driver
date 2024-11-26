@@ -36,7 +36,7 @@ while True:
         continue
     x = data[2] + data[3] * 256
     y = data[4] + data[5] * 256
-    z = data[6] + data[5] * 256
+    z = data[6] + data[7] * 256
     # All other, just random data
     uinput.send_events([
                 libevdev.InputEvent(libevdev.EV_ABS.ABS_X,
